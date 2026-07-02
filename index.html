@@ -13,6 +13,9 @@
             --text-muted: #666666;
             --accent-color: #0070f3;
             --border-color: #eaeaea;
+            --warning-bg: rgba(255, 193, 7, 0.15);
+            --warning-border: #ffc107;
+            --warning-text: #856404;
         }
         @media (prefers-color-scheme: dark) {
             :root {
@@ -22,6 +25,9 @@
                 --text-muted: #aaa;
                 --accent-color: #0070f3;
                 --border-color: #333333;
+                --warning-bg: rgba(255, 193, 7, 0.1);
+                --warning-border: #d39e00;
+                --warning-text: #ffeeba;
             }
         }
         body {
@@ -65,10 +71,27 @@
             margin-bottom: 25px;
             line-height: 1.5;
         }
+        .notice-box {
+            background: var(--warning-bg);
+            border-left: 4px solid var(--warning-border);
+            color: var(--warning-text);
+            padding: 15px;
+            border-radius: 4px;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+        .notice-box .date {
+            display: block;
+            text-align: right;
+            font-size: 12px;
+            margin-top: 5px;
+            opacity: 0.8;
+        }
         .section-title {
             font-size: 16px;
             font-weight: 600;
-            margin: 20px 0 10px 0;
+            margin: 25px 0 12px 0;
             padding-bottom: 5px;
             border-bottom: 2px solid var(--border-color);
         }
@@ -93,6 +116,7 @@
             transition: all 0.2s;
             border: 1px solid var(--border-color);
             box-sizing: border-box;
+            cursor: pointer;
         }
         .btn:hover {
             background: var(--accent-color);
@@ -107,6 +131,37 @@
         }
         .btn-primary:hover {
             opacity: 0.9;
+        }
+        .copy-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--bg-color);
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px dashed var(--border-color);
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .copy-code {
+            font-family: Consolas, Monaco, monospace;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+        .copy-btn {
+            font-size: 12px;
+            padding: 4px 8px;
+            background: var(--accent-color);
+            color: #fff;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+        }
+        .tips {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            line-height: 1.4;
         }
         .footer {
             margin-top: 30px;
@@ -134,12 +189,28 @@
         8元不限流量 · GPT/TikTok/Netflix · 9元永久 · 8K隧道 · 倍率 0
     </div>
 
+    <div class="notice-box">
+        <strong>最新公告：</strong>必须使用我们推荐的软件并更新到最新版（其他软件不保证可用）。
+        <span class="date">- 20260630</span>
+    </div>
+
     <div class="section-title">核心入口</div>
     <div class="grid">
         <a class="btn btn-primary" href="https://a2.doooo.top/">最新免代理入口</a>
         <a class="btn" href="http://113.207.49.134:10010/">中国大陆专用入口</a>
         <a class="btn" href="https://tawk.to/topman8848">在线客服</a>
         <a class="btn" href="https://topman8848.tawk.help">注意事项</a>
+    </div>
+
+    <div class="section-title">免费专区 (不定期更新)</div>
+    <div class="copy-box">
+        <span>免费计划码：<span class="copy-code" id="planCode">free48547</span></span>
+        <button class="copy-btn" onclick="copyText('planCode')">点击复制</button>
+    </div>
+    <div class="tips">★ 免费节点 (右键或长按按钮可复制订阅链接)：</div>
+    <div class="grid">
+        <a class="btn" href="javascript:void(0);" onclick="copyLink('https://dd.aooc.cc/dy/topman8848.com-free20260429.yaml')" title="右键复制链接">免费 Clash 类订阅</a>
+        <a class="btn" href="javascript:void(0);" onclick="copyLink('https://pub-api-1.bianyuan.xyz/sub?target=v2ray&url=vmess%3A%2F%2Few0KICAidiI6ICIyIiwNCiAgInBzIjogIjAxMjHlhY3otLnoioLngrnpgq7ku7bliLAgdG9wbWFuODg0OEBnbWFpbC5jb20iLA0KICAiYWRkIjogImZyZWUueGlubm4uY2MiLA0KICAicG9ydCI6ICIxOTk5OSIsDQogICJpZCI6ICI4MTNiZDg3ZS03MDFkLTM3ZWUtODRlMS03M2Y4OTYxOWI1YTYiLA0KICAiYWlkIjogIjAiLA0KICAic2N5IjogImF1dG8iLA0KICAibmV0IjogInRjcCIsDQogICJ0eXBlIjogInZtZXNzIiwNCiAgImhvc3QiOiAiIiwNCiAgInBhdGgiOiAiIiwNCiAgInBscyI6ICIiLA0KICAic25pIjogIiIsDQogICJhbHBuIjogIiIsDQogICJmcCI6ICIiLA0KICAiaW5zZWN1cmUiOiAiMCINCn0%3D&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2F9bingyin%2Froutes-info%2Frefs%2Fheads%2Fmain%2Fprofile_min.ini&filename=%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9%E9%82%AE%E4%BB%B6%E5%88%B0%20topman8848%40gmail.com&emoji=true&list=false&scv=true&fdn=false&expand=true&sort=false')" title="右键复制链接">免费 V2ray 类订阅</a>
     </div>
 
     <div class="section-title">备用与永久域名</div>
@@ -150,7 +221,7 @@
         <a class="btn" href="http://toopman.com/" target="_blank">备用地址 2</a>
     </div>
 
-    <div class="section-title">客户端与环境下载</div>
+    <div class="section-title">客户端下载</div>
     <div class="grid">
         <a class="btn" href="https://dd.aooc.cc/topmang.com.exe">Windows 客户端</a>
         <a class="btn" href="https://dd.aooc.cc/topmang.com.apk">Android 客户端</a>
@@ -164,6 +235,28 @@
         <p>请发邮件到 <span class="email-highlight">topman8848@gmail.com</span> 获取最新地址及公告。<br><strong>记住邮箱，永不失联！</strong></p>
     </div>
 </div>
+
+<script>
+    // 复制计划码逻辑
+    function copyText(id) {
+        var text = document.getElementById(id).innerText;
+        navigator.clipboard.writeText(text).then(function() {
+            alert('计划码复制成功: ' + text);
+        }).catch(function() {
+            alert('复制失败，请手动复制');
+        });
+    }
+
+    // 复制链接逻辑
+    function copyLink(url) {
+        navigator.clipboard.writeText(url).then(function() {
+            alert('订阅链接已成功复制到剪贴板！\n请打开对应客户端导入。');
+        }).catch(function() {
+            // 兜底方案，如果浏览器限制了自动复制，弹窗让用户手动选
+            window.prompt("复制失败，请手动复制以下链接：", url);
+        });
+    }
+</script>
 
 </body>
 </html>
